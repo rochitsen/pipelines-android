@@ -7,10 +7,9 @@ pool:
   vmImage: 'macOS-latest'
 
 steps:
-- script: |
-  java -version
-  echo "JDK Home: $JAVA_HOME"
-
+- script: java -version
+- script: echo $JAVA_HOME  
+  
 - task: Gradle@2
   inputs:
     workingDirectory: ''
